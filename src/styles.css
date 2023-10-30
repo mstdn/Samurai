@@ -17,8 +17,8 @@ body,
 body {
   font-family: 'Inter var', sans-serif;
   color: white;
-  background-color: #242424;
-  background-image: linear-gradient(0deg, #242424 0%, #707070 100%);
+  background-color: #141414;
+  background-image: linear-gradient(0deg, #1c1c1c 0%, #141414 100%);
   user-select: none;
 }
 

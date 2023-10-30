@@ -1,4 +1,4 @@
-import { SpotLight } from '@react-three/drei'
+import { SpotLight, Float } from '@react-three/drei'
 import { Mic } from'../Models/Mic'
 import { Speaker } from '../Models/Speaker'
 import { Stage } from '../Models/Stage'
@@ -9,6 +9,9 @@ import { Spot } from '../Models/Spot'
 import { Woman1 } from '../Models/People/Woman1'
 import { Woman2 } from '../Models/People/Woman2'
 import { Barricade } from '../Models/Barricade'
+import { Robot1 } from '../Models/Robot1'
+import { Man1 } from '../Models/People/Man1'
+import { Man2 } from '../Models/People/Man2'
 
 export default function World()
 {
@@ -22,13 +25,15 @@ export default function World()
                 position={ [ 0, 0, - 6 ] }
             >
             </Stage>
-            {/* <mesh
-                receiveShadow
-                >
-                <boxGeometry args={ [ 20, 0.2, 20 ] } />
-                <meshStandardMaterial color="darkgray" />
-            </mesh> */}
 
+            {/* Robots on stage */}
+            <Float>
+                <Robot1 
+                    position={ [ 5.6, 4.5, - 4 ] }
+                    rotation-y={ - Math.PI * 0.15 }
+                />
+            </Float>
+            
 
             {/* Speaker 1 */}
             <Speaker 
@@ -109,12 +114,28 @@ export default function World()
                     position={ [ - 6, 6.55, 3.2 ] }
                     rotation-y={ Math.PI * 0.8 }
                 />
+                <SpotLight
+                    castShadow
+                    position={ [ - 5.8, 6, 2.8  ] }
+                    //rotation-y={ - Math.PI * 1 }
+                    intensity={ 0.5 }
+                    angle={Math.PI / 10}
+                    color={ '#3d3d3d' }
+                />
             </group>
 
             <group>
                 <Spot 
                     position={ [ 6, 6.55, 3.2 ] }
                     rotation-y={ - Math.PI * 0.8 }
+                />
+                <SpotLight
+                    castShadow
+                    position={ [ 5.8, 6, 2.8  ] }
+                    //rotation-y={ - Math.PI * 1 }
+                    intensity={ 0.5 }
+                    angle={Math.PI / 10}
+                    color={ '#3d3d3d' }
                 />
             </group>
 
@@ -128,6 +149,16 @@ export default function World()
                     scale={ 0.5 }
                     position={ [ - 2, 0, 5.4 ] }
                     rotation-y={ Math.PI * 1 }
+                />
+                <Man1 
+                    scale={ 0.5 }
+                    position={ [ - 3.4, 0, 6 ] }
+                    rotation-y={ Math.PI * 0.9 }
+                />
+                <Man2 
+                    scale={ 0.5 }
+                    position={ [ 3, 0, 6 ] }
+                    rotation-y={ Math.PI * 1.05 }
                 />
             </group>
             

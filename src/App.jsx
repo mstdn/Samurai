@@ -66,7 +66,7 @@ export default function App({ ready })
           logarithmicDepthBuffer: true,
         } }
       >
-        {/* <Perf /> */}
+        <Perf />
         {/* <CameraAnimation /> */}
         <OrbitControls />
         

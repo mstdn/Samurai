@@ -1,4 +1,4 @@
-import { SpotLight, Float } from '@react-three/drei'
+import { SpotLight, Float, Image } from '@react-three/drei'
 import { Mic } from'../Models/Mic'
 import { Speaker } from '../Models/Speaker'
 import { Stage } from '../Models/Stage'
@@ -21,12 +21,21 @@ export default function World()
 
     return <>
         <group>
-            {/* Base stage */}
-            <Stage
-                scale={ 0.5 }
-                position={ [ 0, 0, - 6 ] }
-            >
-            </Stage>
+            <group>
+                {/* Base stage */}
+                <Stage
+                    scale={ 0.5 }
+                    position={ [ 0, 0, - 6 ] }
+                >
+                </Stage>
+                <Image 
+                    url='./assets/images/samurai.png'
+                    transparent 
+                    opacity={ 1 }
+                    position={ [ 0, 3.4, - 5.8 ] }
+                    scale={ 5 }
+                />
+            </group>
 
             {/* Robots on stage */}
             <Float>

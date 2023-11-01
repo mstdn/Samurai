@@ -35,7 +35,7 @@ export default function Lights()
             shadow-camera-bottom={ - 20 }
             shadow-camera-left={ - 20 }
         />
-        <ambientLight intensity={ 0.8 } />
+        <ambientLight intensity={ 1 } />
         {/* <Sky sunPosition={ [ 4, 4, 1 ] } /> */}
     </>
 }

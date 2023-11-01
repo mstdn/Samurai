@@ -12,6 +12,8 @@ import { Barricade } from '../Models/Barricade'
 import { Robot1 } from '../Models/Robot1'
 import { Man1 } from '../Models/People/Man1'
 import { Man2 } from '../Models/People/Man2'
+import { Jonny } from '../Models/Jonny'
+import { Cybergirl } from '../Models/People/Cybergirl'
 
 export default function World()
 {
@@ -34,6 +36,10 @@ export default function World()
                 />
             </Float>
             
+            <Jonny 
+                scale={ 1.5 }
+                position-y={ 1 }
+            />
 
             {/* Speaker 1 */}
             <Speaker 
@@ -140,11 +146,17 @@ export default function World()
             </group>
 
             <group>
-                <Woman1
-                    scale={ 0.5 }
+                <Cybergirl 
+                    scale={ 1.5 }
                     position={ [ 0, 0, 5 ] }
                     rotation-y={ Math.PI * 1 }
                 />
+
+                {/* <Woman1
+                    scale={ 0.5 }
+                    position={ [ 0, 0, 5 ] }
+                    rotation-y={ Math.PI * 1 }
+                /> */}
                 <Woman2 
                     scale={ 0.5 }
                     position={ [ - 2, 0, 5.4 ] }

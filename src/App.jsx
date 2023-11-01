@@ -60,14 +60,15 @@ export default function App({ ready })
         shadows
         camera={ {
           fov: 45,
-          near: 0.1,
+          near: 1,
           far: 200,
           position: [ 1.5, 10, 20 ],
           logarithmicDepthBuffer: true,
         } }
       >
         {/* <Perf /> */}
-        <CameraAnimation />
+        {/* <CameraAnimation /> */}
+        <OrbitControls />
         
         
         <EffectComposer>

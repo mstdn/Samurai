@@ -25,8 +25,8 @@ export default function Lights()
         <directionalLight
             // ref={ light }
             castShadow
-            position={ [ 4, 4, 1 ] }
-            intensity={ 1 }
+            position={ [ 2, 5, - 8 ] }
+            intensity={ 0.8 }
             shadow-mapSize={ [ 1024, 1024 ] }
             shadow-camera-near={ 1 }
             shadow-camera-far={ 20 }
@@ -35,7 +35,7 @@ export default function Lights()
             shadow-camera-bottom={ - 20 }
             shadow-camera-left={ - 20 }
         />
-        <ambientLight intensity={ 1 } />
+        {/* <ambientLight intensity={ 0.5 } /> */}
         {/* <Sky sunPosition={ [ 4, 4, 1 ] } /> */}
     </>
 }

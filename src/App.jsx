@@ -8,7 +8,8 @@ import {
   useGLTF,
   SoftShadows,
   Environment, 
-  Lightformer
+  Lightformer,
+  Sky
 } from '@react-three/drei'
 import { Bloom, EffectComposer, Noise, Vignette } from '@react-three/postprocessing'
 import { Perf } from 'r3f-perf'
@@ -66,18 +67,13 @@ export default function App({ ready })
           logarithmicDepthBuffer: true,
         } }
       >
-        {/* <Perf /> */}
+        <Perf />
         {/* <CameraAnimation /> */}
         <OrbitControls />
         
         
         <EffectComposer>
           {/* <DepthOfField focusDistance={0} focalLength={0.02} bokehScale={2} height={480} /> */}
-          <Bloom 
-            // luminanceThreshold={0} 
-            // luminanceSmoothing={0.9} 
-            // height={300} 
-          />
           {/* <Noise opacity={0.02} /> */}
           <Vignette eskil={false} offset={0.1} darkness={1} />
         </EffectComposer>
@@ -96,12 +92,14 @@ function Model({ ready })
 
   const group = useRef()
   const { nodes, materials } = useGLTF('./assets/models/mic.glb')
-  
 
   return ( <>
   <group ref={group}>
       <Lights />
-      {/* <Environment preset="city" /> */}
+      
+      <Environment
+        preset='city'
+      />
       {/* Temp */}
       <OrbitControls />
       {/* / temp */}

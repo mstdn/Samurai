@@ -6,14 +6,11 @@ import { Platform } from '../Models/Platform'
 import { Spotlight } from '../Models/Spotlight'
 import { useRef } from 'react'
 import { Spot } from '../Models/Spot'
-import { Woman1 } from '../Models/People/Woman1'
-import { Woman2 } from '../Models/People/Woman2'
 import { Barricade } from '../Models/Barricade'
 import { Robot1 } from '../Models/Robot1'
-import { Man1 } from '../Models/People/Man1'
-import { Man2 } from '../Models/People/Man2'
 import { Jonny } from '../Models/Jonny'
 import { Cybergirl } from '../Models/People/Cybergirl'
+import { Cyberguy } from '../Models/People/Cyberguy'
 
 export default function World()
 {
@@ -155,32 +152,20 @@ export default function World()
             </group>
 
             <group>
+                {/* Cyber woman 1 */}
                 <Cybergirl 
                     scale={ 1.5 }
                     position={ [ 0, 0, 5 ] }
                     rotation-y={ Math.PI * 1 }
                 />
 
-                {/* <Woman1
-                    scale={ 0.5 }
-                    position={ [ 0, 0, 5 ] }
-                    rotation-y={ Math.PI * 1 }
-                /> */}
-                <Woman2 
-                    scale={ 0.5 }
-                    position={ [ - 2, 0, 5.4 ] }
-                    rotation-y={ Math.PI * 1 }
-                />
-                <Man1 
-                    scale={ 0.5 }
+                {/* Cyber guy 1 */}
+                <Cyberguy 
+                    scale={ 1.5 }
                     position={ [ - 3.4, 0, 6 ] }
                     rotation-y={ Math.PI * 0.9 }
                 />
-                <Man2 
-                    scale={ 0.5 }
-                    position={ [ 3, 0, 6 ] }
-                    rotation-y={ Math.PI * 1.05 }
-                />
+                
             </group>
             
 
